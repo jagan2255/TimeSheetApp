@@ -18,7 +18,7 @@ const userRoutes =require("./Src/Routes/User")
 //DB Connection
 
 mongoose
-  .connect("mongodb+srv://admin:user123@project1.cfkyt.mongodb.net/TimeCheat?retryWrites=true&w=majority" ,{
+  .connect("mongodb://localhost:27017/Timesheet" ,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
