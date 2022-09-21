@@ -1,0 +1,28 @@
+<div class="homedata d-flex justify-content-center">
+
+   <div class="form22">
+    <form #form="ngForm" (ngSubmit)="form.valid&&adduser()">
+        <div class="mb-3">
+          <label  class="form-label">Email address</label>
+          <input type="email" class="form-control" required #email="ngModel" name="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="user.email">
+          <small class="text-danger" *ngIf="form.submitted&&email.errors?.['required']">*Email required</small>
+          <small class="text-danger" *ngIf="form.submitted&&email.errors?.['pattern']">*Enter valid email address</small>
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Username</label>
+            <input type="text" class="form-control" required #username="ngModel" name="username" [(ngModel)]="user.username">
+            <small class="text-danger" *ngIf="form.submitted&&username.errors?.['required']">*Username required</small>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control"  minlength="8" required #password="ngModel" name="password" [(ngModel)]="user.password">
+            <small class="text-danger" *ngIf="form.submitted&&password.errors?.['required']">*Password required</small>
+            <small class="text-danger" *ngIf="form.submitted&&password.errors?.['minlength']">*Password must be 8 characters</small>        
+          </div>
+        <div class="d-grid mt-4">
+        <button type="submit" class="btn btn-primary">Add user</button>
+        </div>
+      </form>
+   </div>
+
+</div>

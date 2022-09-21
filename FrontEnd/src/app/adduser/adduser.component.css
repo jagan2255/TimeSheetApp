@@ -1,0 +1,12 @@
+.homedata{
+    min-height: 90vh;
+}
+form{
+    border: 2px solid white;
+    padding: 40px;
+    width: 400px;
+    margin-top: 60px;
+    background-color: rgba(255, 255, 255, 0.282);
+    border-radius: 10px;
+}
+

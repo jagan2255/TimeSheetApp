@@ -1,0 +1,11 @@
+.homedata{
+    min-height: 90vh;
+}
+.task{
+    border: 2px solid white;
+    margin-top: 80px;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+}

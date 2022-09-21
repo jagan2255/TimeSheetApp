@@ -1,0 +1,22 @@
+<div class="homedata p-4">
+
+    <table class="table table-bordered">
+        <thead class="bg-info">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th class="text-center" scope="col">View Chart</th>
+          </tr>
+        </thead>
+        <tbody class="bg-white">
+          <tr *ngFor="let i of users">
+            <th scope="row">{{i.username}}</th>
+            <td>{{i.email}}</td>
+            <td class="text-center"><button (click)="getdetils(i)" class="btn btn-danger">View Details</button></td>
+          </tr>
+       
+         
+        </tbody>
+      </table>
+
+</div>

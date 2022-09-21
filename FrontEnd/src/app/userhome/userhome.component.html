@@ -1,0 +1,20 @@
+<div class="homedata d-flex justify-content-center ">
+
+    <div class="task d-flex justify-content-center shadow">
+        <div class="mt-5">
+            <h4 class="text-center mb-4">{{date}}</h4>
+            <h4 class="text-center">Daily Task</h4>
+            <div class="text-center">
+           <form  (ngSubmit)="checktask()">
+           
+            <button id="button22" type="submit" class=" btn btn-success">Start Task</button>
+        </form>
+        <form (ngSubmit)="submittask()">
+        <button class="mt-2 btn btn-danger" type="submit" *ngIf="isShown">End Task</button>
+        </form>
+    </div>
+        </div>
+
+    </div>
+
+</div>

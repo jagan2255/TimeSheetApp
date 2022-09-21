@@ -1,0 +1,52 @@
+<nav class="navbar navbar-light bg-light shadow sticky-top">
+    <div class="container-fluid mx-5">
+      <a class="navbar-brand d-flex" href="/user">
+  
+      <div><h3 style=" font-family: 'Titillium Web', sans-serif;" class="mt-2 mx-2">TimeSheet App</h3></div>
+    </a>
+      <div>
+      <div>
+        <input type="button" (click)="btnclk1()"  value="LogOut" class="btn btn-danger headlogout">
+    </div>
+    <div>
+        <button class="btn btn-light menubar" data-bs-toggle="offcanvas" href="#offcanvasExample"><i class="fa-solid fa-bars fa-xl"></i></button>
+    </div>
+
+    <div class="offcanvas offcanvas-start bg-light menuwidth" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            <h4>User Dashboard</h4>
+          </div>
+
+          <div>
+
+            <div (click)="btnclk2()" class="textdata"><i class="fa-solid fa-th fa-lg pe-2"></i>Daily Task</div>
+            
+
+          </div>
+          
+        </div>
+    </div>
+      </div>
+
+
+
+    </div>
+    
+  </nav>
+  <div class="d-flex ">
+    <div class="sidebar bg-light shadow">
+         <h4 class="mt-4 text-center">User Dashboard</h4>
+
+         <div (click)="btnclk2()"  class="para22 mt-4 "><i  class="fa-solid fa-th fa-lg pe-2"></i>Daily Task</div>
+        
+        </div>
+    <div class="content">
+        
+      <router-outlet></router-outlet>
+    </div>
+  </div>
